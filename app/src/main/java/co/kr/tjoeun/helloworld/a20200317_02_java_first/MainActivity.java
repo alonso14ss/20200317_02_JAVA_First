@@ -23,16 +23,12 @@ public class MainActivity extends AppCompatActivity {
 //        edittext에 타이핑 => 입력버튼 => 텍스트뷰에 출력
 //        +입력버튼 누르면 기존 입력내용 삭제
 
-        binding.inputEdt;
-        binding.outputTxt;
-        binding.pushBtn;
-
-        pushBtn.setOnClickListener(new View.OnClickListener() {
+        binding.pushBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String inputLog = inputEdt.getText().toString();
-                outputTxt.setText(inputLog);
-                inputEdt.setText("");
+                String inputLog = binding.inputEdt.getText().toString();
+                binding.outputTxt.setText(inputLog);
+                binding.inputEdt.setText("");
             }
         });
 
